@@ -1,0 +1,12 @@
+{
+    "name": "Java Codespace",
+    "dockerFile": "Dockerfile",
+    "settings": {
+      "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "extensions": [
+      "vscjava.vscode-java-pack"
+    ],
+    "postCreateCommand": "gradle build"
+  }
+  
