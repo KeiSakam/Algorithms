@@ -28,8 +28,11 @@ public class SinglyLinkedList<T> {
         if (data == null) {
             throw new IllegalArgumentException("Data cannot be null");
         }
+        // newNode に先に head をセットしてしまっているが、これだとリスト全体へのアクセス情報を失うかもしれない。
+        // new SinglyLinkedListNode<>(data, null); で作成して、head = newNode の後で newNode.setNet(head) としたほうが良い気がする。
+        // tail = head がそれと同じことなのかもしれないが。
         SinglyLinkedListNode<T> newNode = new SinglyLinkedListNode<>(data, head);
-        head = newNode;
+        head = newNode
         if (tail == null) {
             tail = head;
         }
