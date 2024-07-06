@@ -3,7 +3,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 import java.util.NoSuchElementException;
-import java.util.IndexOutOfBoundsException;
 
 public class ArrayListIndexTest {
 

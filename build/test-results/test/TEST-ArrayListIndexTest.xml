@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ArrayListIndexTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-07-06T15:36:36" hostname="codespaces-a67ac3" time="0.063">
+  <properties/>
+  <testcase name="testExceptions()" classname="ArrayListIndexTest" time="0.042"/>
+  <testcase name="testRemoveAtIndex()" classname="ArrayListIndexTest" time="0.007"/>
+  <testcase name="testComplexScenarios()" classname="ArrayListIndexTest" time="0.002"/>
+  <testcase name="testAddAtIndex()" classname="ArrayListIndexTest" time="0.002"/>
+  <system-out><![CDATA[Running testExceptions...
+testExceptions completed successfully.
+Running testRemoveAtIndex...
+testRemoveAtIndex completed successfully.
+Running testComplexScenarios...
+testComplexScenarios completed successfully.
+Running testAddAtIndex...
+testAddAtIndex completed successfully.
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

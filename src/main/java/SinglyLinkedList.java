@@ -32,7 +32,7 @@ public class SinglyLinkedList<T> {
         // new SinglyLinkedListNode<>(data, null); で作成して、head = newNode の後で newNode.setNet(head) としたほうが良い気がする。
         // tail = head がそれと同じことなのかもしれないが。
         SinglyLinkedListNode<T> newNode = new SinglyLinkedListNode<>(data, head);
-        head = newNode
+        head = newNode;
         if (tail == null) {
             tail = head;
         }
