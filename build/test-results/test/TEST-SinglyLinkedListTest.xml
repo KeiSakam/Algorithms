@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="SinglyLinkedListTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2024-07-06T15:36:36" hostname="codespaces-a67ac3" time="0.02">
+<testsuite name="SinglyLinkedListTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2024-07-10T08:15:12" hostname="codespaces-a67ac3" time="0.01">
   <properties/>
-  <testcase name="testExceptions()" classname="SinglyLinkedListTest" time="0.003"/>
+  <testcase name="testExceptions()" classname="SinglyLinkedListTest" time="0.005"/>
   <testcase name="testAddToFront()" classname="SinglyLinkedListTest" time="0.001"/>
-  <testcase name="testRemoveFromBack()" classname="SinglyLinkedListTest" time="0.004"/>
-  <testcase name="testAddToBack()" classname="SinglyLinkedListTest" time="0.002"/>
-  <testcase name="testRemoveFromFront()" classname="SinglyLinkedListTest" time="0.004"/>
+  <testcase name="testRemoveFromBack()" classname="SinglyLinkedListTest" time="0.001"/>
+  <testcase name="testAddToBack()" classname="SinglyLinkedListTest" time="0.001"/>
+  <testcase name="testRemoveFromFront()" classname="SinglyLinkedListTest" time="0.0"/>
   <system-out><![CDATA[Running testExceptions...
 testExceptions completed successfully.
 Running testAddToFront...
