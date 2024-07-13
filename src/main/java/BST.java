@@ -78,6 +78,28 @@ public class BST<T extends Comparable<? super T>> {
         }
     }
 
+    public boolean contains(T data) {
+        if (data == null) {
+            throw new IllegalArgumentException("Data cannot be null.");
+        }
+        return containsRecursive(root, data);
+    }
+
+    private boolean containsRecursive(BSTNode<T> node, T data) {
+        if (node == null) {
+            return false;
+        }
+
+        int cmp = data.compareTo(node.getData());
+        if (cmp < 0) {
+            return containsRecursive(node.getLeft(), data);
+        } else if (cmp > 0) {
+            return containsRecursive(node.getRight(), data);
+        } else {
+            return true;
+        }
+    }
+
     public BSTNode<T> getRoot() {
         return root;
     }

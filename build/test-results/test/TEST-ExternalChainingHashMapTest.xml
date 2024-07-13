@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ExternalChainingHashMapTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-07-13T15:16:08" hostname="codespaces-a67ac3" time="0.025">
+  <properties/>
+  <testcase name="testPutAndGet()" classname="ExternalChainingHashMapTest" time="0.004"/>
+  <testcase name="testRemove()" classname="ExternalChainingHashMapTest" time="0.002"/>
+  <testcase name="testResize()" classname="ExternalChainingHashMapTest" time="0.013"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

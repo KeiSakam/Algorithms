@@ -24,9 +24,6 @@ public class BSTTest {
         bst.add(10);
         bst.add(100);
         bst.add(20);
-        // bst.remove(10);
-        // bst.remove(5);
-        // bst.remove(15);
 
         assertEquals(8, bst.size());
 
@@ -83,5 +80,56 @@ public class BSTTest {
         assertThrows(IllegalArgumentException.class, () -> {
             bst.remove(null);
         });
+    }
+
+    @Test
+    public void testContains() {
+        bst.add(50);
+        bst.add(15);
+        bst.add(75);
+        bst.add(5);
+        bst.add(25);
+        bst.add(10);
+        bst.add(100);
+        bst.add(20);
+
+        assertTrue(bst.contains(50));
+        assertTrue(bst.contains(15));
+        assertTrue(bst.contains(75));
+        assertTrue(bst.contains(5));
+        assertTrue(bst.contains(25));
+        assertTrue(bst.contains(10));
+        assertTrue(bst.contains(100));
+        assertTrue(bst.contains(20));
+
+        assertFalse(bst.contains(30));
+        assertFalse(bst.contains(60));
+        assertFalse(bst.contains(110));
+    }
+
+    @Test
+    public void testContainsAfterRemove() {
+        bst.add(50);
+        bst.add(15);
+        bst.add(75);
+        bst.add(5);
+        bst.add(25);
+        bst.add(10);
+        bst.add(100);
+        bst.add(20);
+
+        bst.remove(10);
+        bst.remove(5);
+        bst.remove(15);
+
+        assertFalse(bst.contains(10));
+        assertFalse(bst.contains(5));
+        assertFalse(bst.contains(15));
+
+        assertTrue(bst.contains(50));
+        assertTrue(bst.contains(75));
+        assertTrue(bst.contains(25));
+        assertTrue(bst.contains(100));
+        assertTrue(bst.contains(20));
     }
 }

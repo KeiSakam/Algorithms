@@ -1,26 +1,26 @@
-Running testExceptions...
-'testExceptions completed successfully.
-Running testRemoveAtIndex...
-*testRemoveAtIndex completed successfully.
- Running testComplexScenarios...
--testComplexScenarios completed successfully.
-	Running testAddAtIndex...
-	'testAddAtIndex completed successfully.
-
-Running testExceptions...
-
-'testExceptions completed successfully.
-Running testEnqueue...
-$testEnqueue completed successfully.
-Running testDequeue...
-$testDequeue completed successfully.
-Running testExceptions...
-'testExceptions completed successfully.
-Running testAddToFront...
-'testAddToFront completed successfully.
-Running testRemoveFromBack...
-+testRemoveFromBack completed successfully.
-Running testAddToBack...
-&testAddToBack completed successfully.
-Running testRemoveFromFront...
-,testRemoveFromFront completed successfully.
+Running testExceptions...
+'testExceptions completed successfully.
+	Running testRemoveAtIndex...
+	*testRemoveAtIndex completed successfully.
+
+ Running testComplexScenarios...
+
+-testComplexScenarios completed successfully.
+Running testAddAtIndex...
+'testAddAtIndex completed successfully.
+Running testExceptions...
+'testExceptions completed successfully.
+Running testEnqueue...
+$testEnqueue completed successfully.
+Running testDequeue...
+$testDequeue completed successfully.
+Running testExceptions...
+'testExceptions completed successfully.
+Running testAddToFront...
+'testAddToFront completed successfully.
+Running testRemoveFromBack...
++testRemoveFromBack completed successfully.
+Running testAddToBack...
+&testAddToBack completed successfully.
+Running testRemoveFromFront...
+,testRemoveFromFront completed successfully.

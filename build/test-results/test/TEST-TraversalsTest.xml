@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TraversalsTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-07-10T08:15:12" hostname="codespaces-a67ac3" time="0.035">
+<testsuite name="TraversalsTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-07-13T15:16:08" hostname="codespaces-a67ac3" time="0.01">
   <properties/>
-  <testcase name="testPostorder()" classname="TraversalsTest" time="0.023"/>
+  <testcase name="testPostorder()" classname="TraversalsTest" time="0.001"/>
   <testcase name="testPreorder()" classname="TraversalsTest" time="0.002"/>
-  <testcase name="testInorder()" classname="TraversalsTest" time="0.003"/>
+  <testcase name="testInorder()" classname="TraversalsTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
