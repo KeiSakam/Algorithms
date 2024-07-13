@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="MinHeapTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2024-07-13T15:16:08" hostname="codespaces-a67ac3" time="0.02">
+<testsuite name="MinHeapTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2024-07-13T17:30:04" hostname="codespaces-a67ac3" time="0.021">
   <properties/>
-  <testcase name="testAddNull()" classname="MinHeapTest" time="0.002"/>
-  <testcase name="testAdd()" classname="MinHeapTest" time="0.004"/>
-  <testcase name="testRemoveEmpty()" classname="MinHeapTest" time="0.001"/>
-  <testcase name="testRemove()" classname="MinHeapTest" time="0.002"/>
-  <testcase name="testResize()" classname="MinHeapTest" time="0.004"/>
+  <testcase name="testAddNull()" classname="MinHeapTest" time="0.006"/>
+  <testcase name="testAdd()" classname="MinHeapTest" time="0.003"/>
+  <testcase name="testRemoveEmpty()" classname="MinHeapTest" time="0.002"/>
+  <testcase name="testRemove()" classname="MinHeapTest" time="0.001"/>
+  <testcase name="testResize()" classname="MinHeapTest" time="0.002"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

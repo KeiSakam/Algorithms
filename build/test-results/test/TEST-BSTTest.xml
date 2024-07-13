@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="BSTTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2024-07-13T15:16:08" hostname="codespaces-a67ac3" time="0.071">
+<testsuite name="BSTTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2024-07-13T17:30:04" hostname="codespaces-a67ac3" time="0.029">
   <properties/>
-  <testcase name="testAddNull()" classname="BSTTest" time="0.034"/>
-  <testcase name="testRemoveNonExistent()" classname="BSTTest" time="0.004"/>
-  <testcase name="testRemoveNull()" classname="BSTTest" time="0.001"/>
-  <testcase name="testAddDuplicates()" classname="BSTTest" time="0.015"/>
-  <testcase name="testAddAndRemove()" classname="BSTTest" time="0.007"/>
+  <testcase name="testAddNull()" classname="BSTTest" time="0.002"/>
+  <testcase name="testContains()" classname="BSTTest" time="0.005"/>
+  <testcase name="testRemoveNonExistent()" classname="BSTTest" time="0.001"/>
+  <testcase name="testRemoveNull()" classname="BSTTest" time="0.005"/>
+  <testcase name="testAddDuplicates()" classname="BSTTest" time="0.001"/>
+  <testcase name="testAddAndRemove()" classname="BSTTest" time="0.001"/>
+  <testcase name="testContainsAfterRemove()" classname="BSTTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
