@@ -44,4 +44,35 @@ public class ExternalChainingHashMapTest {
         }
         assertTrue(map.getTable().length > ExternalChainingHashMap.INITIAL_CAPACITY);
     }
+
+    @Test
+    public void testContainsKey() {
+        map.put(1, "one");
+        map.put(2, "two");
+        map.put(3, "three");
+
+        assertTrue(map.containsKey(1));
+        assertTrue(map.containsKey(2));
+        assertTrue(map.containsKey(3));
+        assertFalse(map.containsKey(4));
+
+        map.remove(2);
+        assertFalse(map.containsKey(2));
+    }
+
+    @Test
+    public void testContainsKeyWithCollisions() {
+        map.put(1, "one");
+        map.put(14, "fourteen"); // Assuming initial capacity is 13, 1 and 14 will collide
+        map.put(27, "twenty-seven"); // 1, 14, and 27 will collide
+
+        assertTrue(map.containsKey(1));
+        assertTrue(map.containsKey(14));
+        assertTrue(map.containsKey(27));
+
+        map.remove(14);
+        assertFalse(map.containsKey(14));
+        assertTrue(map.containsKey(1));
+        assertTrue(map.containsKey(27));
+    }
 }

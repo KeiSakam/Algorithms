@@ -73,15 +73,15 @@ public class ExternalChainingHashMap<K, V> {
         if (key == null || value == null) {
             throw new IllegalArgumentException("Key or value is null.");
         }
-        
+
         // Check load factor and resize if needed
         if ((size + 1.0) / table.length > MAX_LOAD_FACTOR) {
             resizeBackingTable((2 * table.length) + 1);
         }
-        
+
         int index = Math.abs(key.hashCode() % table.length);
         ExternalChainingMapEntry<K, V> current = table[index];
-        
+
         while (current != null) {
             if (current.getKey().equals(key)) {
                 V oldValue = current.getValue();
@@ -90,7 +90,7 @@ public class ExternalChainingHashMap<K, V> {
             }
             current = current.getNext();
         }
-        
+
         table[index] = new ExternalChainingMapEntry<>(key, value, table[index]);
         size++;
         return null;
@@ -108,11 +108,11 @@ public class ExternalChainingHashMap<K, V> {
         if (key == null) {
             throw new IllegalArgumentException("Key is null.");
         }
-        
+
         int index = Math.abs(key.hashCode() % table.length);
         ExternalChainingMapEntry<K, V> current = table[index];
         ExternalChainingMapEntry<K, V> previous = null;
-        
+
         while (current != null) {
             if (current.getKey().equals(key)) {
                 V oldValue = current.getValue();
@@ -127,8 +127,33 @@ public class ExternalChainingHashMap<K, V> {
             previous = current;
             current = current.getNext();
         }
-        
+
         throw new NoSuchElementException("Key not found in map.");
+    }
+
+    /**
+     * Checks whether the key is in the map.
+     *
+     * @param key The key to search for.
+     * @return true if the key is in the map, false otherwise.
+     * @throws java.lang.IllegalArgumentException If key is null.
+     */
+    public boolean containsKey(K key) {
+        if (key == null) {
+            throw new IllegalArgumentException("Key is null.");
+        }
+
+        int index = Math.abs(key.hashCode() % table.length);
+        ExternalChainingMapEntry<K, V> current = table[index];
+
+        while (current != null) {
+            if (current.getKey().equals(key)) {
+                return true;
+            }
+            current = current.getNext();
+        }
+
+        return false;
     }
 
     /**
@@ -152,7 +177,7 @@ public class ExternalChainingHashMap<K, V> {
         ExternalChainingMapEntry<K, V>[] oldTable = table;
         table = (ExternalChainingMapEntry<K, V>[]) new ExternalChainingMapEntry[length];
         size = 0;
-        
+
         for (int i = 0; i < oldTable.length; i++) {
             ExternalChainingMapEntry<K, V> current = oldTable[i];
             while (current != null) {
