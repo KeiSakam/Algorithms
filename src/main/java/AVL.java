@@ -56,12 +56,12 @@ public class AVL<T extends Comparable<? super T>> {
         size--;
         return dummy.getData();
     }
-
+    
     private AVLNode<T> removeHelper(AVLNode<T> node, T data, AVLNode<T> dummy) {
         if (node == null) {
             return null;
         }
-
+    
         int compareResult = data.compareTo(node.getData());
         if (compareResult < 0) {
             node.setLeft(removeHelper(node.getLeft(), data, dummy));
@@ -74,24 +74,21 @@ public class AVL<T extends Comparable<? super T>> {
             } else if (node.getRight() == null) {
                 return node.getLeft();
             } else {
-                AVLNode<T> successorParent = node;
-                AVLNode<T> successor = node.getRight();
-                while (successor.getLeft() != null) {
-                    successorParent = successor;
-                    successor = successor.getLeft();
-                }
+                AVLNode<T> successor = findMin(node.getRight());
                 node.setData(successor.getData());
-                if (successorParent == node) {
-                    node.setRight(successor.getRight());
-                } else {
-                    successorParent.setLeft(successor.getRight());
-                }
+                node.setRight(removeHelper(node.getRight(), successor.getData(), new AVLNode<>(null)));
             }
         }
-
+    
         return balance(node);
     }
-
+    
+    private AVLNode<T> findMin(AVLNode<T> node) {
+        while (node.getLeft() != null) {
+            node = node.getLeft();
+        }
+        return node;
+    }
     /**
      * Updates the height and balance factor of a node using its
      * setter methods.
