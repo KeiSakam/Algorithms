@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ExternalChainingHashMapTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2024-07-13T17:30:04" hostname="codespaces-a67ac3" time="0.013">
+<testsuite name="ExternalChainingHashMapTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2024-07-14T04:14:09" hostname="codespaces-a67ac3" time="0.035">
   <properties/>
-  <testcase name="testContainsKey()" classname="ExternalChainingHashMapTest" time="0.001"/>
+  <testcase name="testGet()" classname="ExternalChainingHashMapTest" time="0.004"/>
+  <testcase name="testContainsKey()" classname="ExternalChainingHashMapTest" time="0.003"/>
   <testcase name="testPutAndGet()" classname="ExternalChainingHashMapTest" time="0.001"/>
   <testcase name="testContainsKeyWithCollisions()" classname="ExternalChainingHashMapTest" time="0.001"/>
   <testcase name="testRemove()" classname="ExternalChainingHashMapTest" time="0.001"/>
-  <testcase name="testResize()" classname="ExternalChainingHashMapTest" time="0.005"/>
+  <testcase name="testResize()" classname="ExternalChainingHashMapTest" time="0.012"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

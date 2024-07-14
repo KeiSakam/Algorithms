@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="MaxHeapTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2024-07-13T17:30:04" hostname="codespaces-a67ac3" time="0.008">
+<testsuite name="MaxHeapTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2024-07-14T04:14:09" hostname="codespaces-a67ac3" time="0.012">
   <properties/>
   <testcase name="testAddNull()" classname="MaxHeapTest" time="0.001"/>
   <testcase name="testAdd()" classname="MaxHeapTest" time="0.001"/>
   <testcase name="testRemoveEmpty()" classname="MaxHeapTest" time="0.001"/>
-  <testcase name="testRemove()" classname="MaxHeapTest" time="0.0"/>
-  <testcase name="testResize()" classname="MaxHeapTest" time="0.001"/>
+  <testcase name="testRemove()" classname="MaxHeapTest" time="0.001"/>
+  <testcase name="testResize()" classname="MaxHeapTest" time="0.003"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

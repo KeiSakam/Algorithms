@@ -35,6 +35,28 @@ public class ExternalChainingHashMap<K, V> {
     }
 
     /**
+     * Gets the value associated with the given key.
+     *
+     * @param key The key to search for in the map. You may assume that the
+     *            key is never null.
+     * @return The value associated with the given key.
+     * @throws java.util.NoSuchElementException If the key is not in the map.
+     */
+    public V get(K key) {
+        int index = Math.abs(key.hashCode() % table.length);
+        ExternalChainingMapEntry<K, V> current = table[index];
+        
+        while (current != null) {
+            if (current.getKey().equals(key)) {
+                return current.getValue();
+            }
+            current = current.getNext();
+        }
+        
+        throw new NoSuchElementException("Key not found in the map.");
+    }
+
+    /**
      * Adds the given key-value pair to the map. If an entry in the map
      * already has this key, replace the entry's value with the new one
      * passed in.

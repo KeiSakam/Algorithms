@@ -18,8 +18,9 @@ public class ExternalChainingHashMapTest {
         assertNull(map.put(1, "one"));
         assertNull(map.put(2, "two"));
         assertEquals("one", map.put(1, "ONE"));
-        assertEquals("ONE", map.getTable()[Math.abs(1 % map.getTable().length)].getValue());
-        assertEquals("two", map.getTable()[Math.abs(2 % map.getTable().length)].getValue());
+        assertEquals("ONE", map.put(1, "one"));
+        assertEquals("two", map.get(2));
+        assertEquals("one", map.get(1));
     }
 
     @Test
@@ -74,5 +75,23 @@ public class ExternalChainingHashMapTest {
         assertFalse(map.containsKey(14));
         assertTrue(map.containsKey(1));
         assertTrue(map.containsKey(27));
+    }
+    
+    @Test
+    public void testGet() {
+        map.put(1, "one");
+        map.put(2, "two");
+        map.put(3, "three");
+
+        assertEquals("one", map.get(1));
+        assertEquals("two", map.get(2));
+        assertEquals("three", map.get(3));
+
+        try {
+            map.get(4);
+            fail("Expected NoSuchElementException");
+        } catch (NoSuchElementException e) {
+            // expected
+        }
     }
 }
