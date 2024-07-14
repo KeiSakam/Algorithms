@@ -1,9 +1,6 @@
 import java.util.Arrays;
 import java.util.Comparator;
-
-import java.util.NoSuchElementException;
 import java.util.Objects;
-
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -40,6 +37,13 @@ public class SortingTest {
     }
     
     @Test
+    public void testMergeSort() {
+        Integer[] arrayToSort = Arrays.copyOf(unsortedArray, unsortedArray.length);
+        Sorting.mergeSort(arrayToSort, Comparator.naturalOrder());
+        assertArrayEquals(sortedArray, arrayToSort);
+    }
+
+    @Test
     public void testBubbleSortWithDuplicates() {
         Integer[] arrayWithDuplicates = {4, 3, 3, 5, 2, 6, 7};
         Integer[] sortedWithDuplicates = {2, 3, 3, 4, 5, 6, 7};
@@ -60,6 +64,14 @@ public class SortingTest {
         Integer[] arrayWithDuplicates = {4, 3, 3, 5, 2, 6, 7};
         Integer[] sortedWithDuplicates = {2, 3, 3, 4, 5, 6, 7};
         Sorting.insertionSort(arrayWithDuplicates, Comparator.naturalOrder());
+        assertArrayEquals(sortedWithDuplicates, arrayWithDuplicates);
+    }
+    
+    @Test
+    public void testMergeSortWithDuplicates() {
+        Integer[] arrayWithDuplicates = {4, 3, 3, 5, 2, 6, 7};
+        Integer[] sortedWithDuplicates = {2, 3, 3, 4, 5, 6, 7};
+        Sorting.mergeSort(arrayWithDuplicates, Comparator.naturalOrder());
         assertArrayEquals(sortedWithDuplicates, arrayWithDuplicates);
     }
     
@@ -98,7 +110,33 @@ public class SortingTest {
         Sorting.insertionSort(people, Comparator.comparingInt(Person::getAge));
         assertArrayEquals(sortedPeople, people);
     }
-    
+
+    @Test
+    public void testMergeSortStability() {
+        Person[] people = {
+            new Person("Alice", 30),
+            new Person("Bob", 25),
+            new Person("Charlie", 25),
+            new Person("David", 40)
+        };
+        Person[] sortedPeople = {
+            new Person("Bob", 25),
+            new Person("Charlie", 25),
+            new Person("Alice", 30),
+            new Person("David", 40)
+        };
+        Sorting.mergeSort(people, Comparator.comparingInt(Person::getAge));
+        assertArrayEquals(sortedPeople, people);
+    }
+
+    @Test
+    public void testLsdRadixSort() {
+        int[] unsortedArray = {1000, 2014, 231, 53, -1, -92, -9403, 634, -207};
+        int[] sortedArray = {-9403, -207, -92, -1, 53, 231, 634, 1000, 2014};
+        Sorting.lsdRadixSort(unsortedArray);
+        assertArrayEquals(sortedArray, unsortedArray);
+    }
+
     static class Person {
         private String name;
         private int age;
