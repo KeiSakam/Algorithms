@@ -6,6 +6,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.List;
 import java.util.Arrays;
+import java.util.PriorityQueue;
 
 public class GraphAlgorithmsTest {
 
@@ -80,5 +81,39 @@ public class GraphAlgorithmsTest {
         List<Vertex<Integer>> dfsResult = GraphAlgorithms.dfs(v1, graph);
         List<Vertex<Integer>> expectedDFSOrder = Arrays.asList(v1, v2, v4, v5, v3);
         assertEquals(expectedDFSOrder, dfsResult); // The parallel edge should not affect the DFS order
+    }
+
+    @Test
+    public void testPrims() {
+        Set<Edge<Integer>> mst = GraphAlgorithms.prims(v1, graph);
+        Set<Edge<Integer>> expectedMST = new HashSet<>(Arrays.asList(
+                new Edge<>(v1, v2, 1),
+                new Edge<>(v2, v1, 1),
+                new Edge<>(v1, v3, 1),
+                new Edge<>(v3, v1, 1),
+                new Edge<>(v2, v4, 1),
+                new Edge<>(v4, v2, 1),
+                new Edge<>(v4, v5, 1),
+                new Edge<>(v5, v4, 1)
+        ));
+        assertEquals(expectedMST, mst);
+    }
+
+    @Test
+    public void testPrimsDisconnectedGraph() {
+        Vertex<Integer> v6 = new Vertex<>(6);
+        Set<Vertex<Integer>> vertices = new HashSet<>(Arrays.asList(v1, v2, v3, v4, v5, v6));
+        Set<Edge<Integer>> edges = new HashSet<>(Arrays.asList(
+                new Edge<>(v1, v2, 1),
+                new Edge<>(v1, v3, 1),
+                new Edge<>(v2, v4, 1),
+                new Edge<>(v3, v4, 1),
+                new Edge<>(v4, v5, 1)
+        ));
+
+        graph = new Graph<>(vertices, edges);
+
+        Set<Edge<Integer>> mst = GraphAlgorithms.prims(v1, graph);
+        assertNull(mst); // The graph is disconnected, so MST should be null
     }
 }
